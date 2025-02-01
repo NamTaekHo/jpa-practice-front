@@ -1,0 +1,100 @@
+/* CoffeeList.css */
+.coffee-list-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.coffee-list-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.coffee-list {
+    list-style-type: none;
+    padding: 0;
+
+    /* Grid 레이아웃 설정 */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+
+    /* 데이터가 적을 때도 가운데 정렬 */
+    align-items: start; 
+    justify-items: center;
+
+    /* 최소 높이를 설정해 균형 유지 */
+    min-height: 500px; 
+}
+
+.coffee-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+
+    /* 고정된 크기 설정 */
+    width: 100%; 
+    max-width: 300px; 
+    cursor: pointer;
+}
+
+.coffee-image {
+    width: 100%;
+    height: auto;
+
+    /* 이미지 비율 유지 */
+    max-height: 150px; 
+    object-fit: cover; 
+}
+
+.coffee-info {
+    padding: 10px;
+}
+
+.coffee-name {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.coffee-price {
+    color: #555;
+}
+
+/* 페이지네이션 스타일 */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pagination-button {
+    background-color: burlywood;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+
+    /* 부드러운 전환 효과 */
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.pagination-button:hover:not([disabled]) {
+    background-color: white; /* 배경색을 하얗게 변경 */
+    color: burlywood; /* 글자색을 파란색으로 변경 */
+}
+
+.pagination-button[disabled] {
+    background-color: #ccc; /* 비활성화된 버튼 색상 */
+    cursor: not-allowed; /* 비활성화된 버튼에 커서 표시 */
+}
+
+.pagination-info {
+    margin: 0 10px;
+}

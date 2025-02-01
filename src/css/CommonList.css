@@ -1,0 +1,67 @@
+.table-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.table-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.data-table th,
+.data-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.data-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.data-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination-button {
+    background-color: burlywood;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+
+    /* 부드러운 전환 효과 */
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.pagination-button:hover:not([disabled]) {
+    background-color: white; /* 배경색을 하얗게 변경 */
+    color: burlywood; /* 글자색을 파란색으로 변경 */
+}
+
+.pagination-button[disabled] {
+    background-color: #ccc; /* 비활성화된 버튼 색상 */
+    cursor: not-allowed; /* 비활성화된 버튼에 커서 표시 */
+}
+
+.pagination-info {
+    margin: 0 10px;
+}
