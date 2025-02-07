@@ -21,7 +21,7 @@ export function CreateCoffeePage() {
       });
       navigate("/coffees");
     } catch (error) {
-      alert("커피 등록에 실패했습니다다");
+      alert("커피 등록에 실패했습니다");
     }
   };
 
